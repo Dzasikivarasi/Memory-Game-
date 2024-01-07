@@ -233,12 +233,10 @@ body {
   padding: 0;
   list-style: none;
 
-  perspective: 1000px; /* Для анимации */
+  perspective: 1000px;
 
   --theme-back: url("../img/back-cats.svg");
 }
-
-/* класс для смены рубашки карточек, добавляется списку .cards */
 
 .cards-theme-flowers {
   --theme-back: url("../img/back-flowers.svg");
@@ -271,8 +269,6 @@ body {
   backface-visibility: hidden;
 }
 
-/* Рубашка */
-
 .card::after {
   grid-area: 1 / 1 / 2 / 2;
   content: "";
@@ -283,8 +279,6 @@ body {
   background-position: center;
   backface-visibility: hidden;
 }
-
-/* Финальная отметка */
 
 .card::before {
   content: "";
@@ -338,20 +332,15 @@ body {
   overflow-y: hidden;
   overscroll-behavior: contain;
   pointer-events: auto;
-
-  /* visibility: hidden; */
-  /* opacity: 0; */
   animation: fadeIn calc(var(--animation-duration) + 0.1s) calc(2 * var(--animation-duration)) both;
 }
 
 @keyframes fadeIn {
   from {
-    /* visibility: hidden; */
     opacity: 0;
   }
 
   to {
-    /* visibility: visible; */
     opacity: 1;
   }
 }
